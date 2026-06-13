@@ -1,0 +1,59 @@
+{
+	"summary": {
+		"algorithm": "FSM",
+		"behavior_changes": {
+			"bt_node_changes": 0,
+			"fsm_state_changes": 19,
+			"goap_goal_changes": 0,
+			"goap_plan_changes": 0,
+			"total_behavior_changes": 19
+		},
+		"combat": {
+			"total_damage_dealt": 2752,
+			"total_enemy_kills": 42,
+			"total_healing_done": 616
+		},
+		"decision_time": {
+			"avg_decision_time_usec": 86,
+			"by_npc": {
+				"lion": {
+					"avg_decision_time_usec": 120,
+					"max_decision_time_usec": 383,
+					"sample_count": 35,
+					"total_decision_time_usec": 4197
+				},
+				"scarecrow": {
+					"avg_decision_time_usec": 51,
+					"max_decision_time_usec": 177,
+					"sample_count": 113,
+					"total_decision_time_usec": 5746
+				},
+				"tin_man": {
+					"avg_decision_time_usec": 110,
+					"max_decision_time_usec": 387,
+					"sample_count": 113,
+					"total_decision_time_usec": 12431
+				}
+			},
+			"max_decision_time_usec": 387,
+			"sample_count": 261,
+			"total_decision_time_usec": 22374
+		},
+		"duration_seconds": 119.118,
+		"end_time": "2026-06-13T11:05:08",
+		"goap_replans": 0,
+		"memory": {
+			"avg_memory_mb": 64.486,
+			"final_memory_mb": 64.728,
+			"max_memory_mb": 64.733,
+			"sample_count": 265
+		},
+		"run_id": "run_17",
+		"start_time": "2026-06-13T11:03:09",
+		"total_damage_dealt": 2752,
+		"total_decisions_made": 0,
+		"total_enemy_kills": 42,
+		"total_healing_done": 616,
+		"total_scenarios_completed": 12
+	}
+}
