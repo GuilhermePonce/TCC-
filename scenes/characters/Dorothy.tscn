@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://dj8dcl045knsa"]
+
+[ext_resource type="Script" uid="uid://2g44i7xiu87t" path="res://scripts/characters/DorothyController.gd" id="1"]
+[ext_resource type="Script" uid="uid://dwicg2jhxkvmy" path="res://scripts/characters/CombatStats.gd" id="2"]
+[ext_resource type="Script" uid="uid://bby2p0y38cllp" path="res://scripts/characters/HealthBar2D.gd" id="3"]
+
+[sub_resource type="CircleShape2D" id="BodyShape"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="AttackShape"]
+radius = 54.0
+
+[node name="Dorothy" type="CharacterBody2D" unique_id=1737949632]
+script = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2033897672]
+shape = SubResource("BodyShape")
+
+[node name="Visual" type="Node2D" parent="." unique_id=1387432332]
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=439555500]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1353109185]
+shape = SubResource("AttackShape")
+
+[node name="HealthBar" type="Node2D" parent="." unique_id=1313362954]
+script = ExtResource("3")
+
+[node name="CombatStats" type="Node" parent="." unique_id=1721111126]
+script = ExtResource("2")

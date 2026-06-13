@@ -1,0 +1,288 @@
+[
+	{
+		"id": 1,
+		"name": "O Espantalho Preso",
+		"type": "calibration",
+		"active_characters": ["dorothy", "scarecrow"],
+		"objective": "Dorothy encontra o Espantalho preso e decide como interagir com ele.",
+		"book_event": "Primeiro encontro com o Espantalho no caminho de tijolos amarelos.",
+		"decisions": [
+			{
+				"text": "Libertar o Espantalho imediatamente",
+				"effects": {"scarecrow": {"intelligence": 15}}
+			},
+			{
+				"text": "Perguntar como ele pode ajudar antes de libertá-lo",
+				"effects": {"scarecrow": {"intelligence": 10}, "tin_man": {"empathy": -5}}
+			},
+			{
+				"text": "Ignorá-lo temporariamente e explorar a área",
+				"effects": {"scarecrow": {"intelligence": -10}}
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "O Homem de Lata Enferrujado",
+		"type": "calibration",
+		"active_characters": ["dorothy", "tin_man"],
+		"objective": "Dorothy encontra o Homem de Lata imóvel e precisa decidir se o ajuda.",
+		"book_event": "Encontro com o Homem de Lata preso pela ferrugem.",
+		"decisions": [
+			{
+				"text": "Ajudá-lo imediatamente",
+				"effects": {"tin_man": {"empathy": 15}}
+			},
+			{
+				"text": "Pedir explicações antes de ajudar",
+				"effects": {"tin_man": {"empathy": 5}, "scarecrow": {"intelligence": 5}}
+			},
+			{
+				"text": "Continuar viagem por enquanto",
+				"effects": {"tin_man": {"empathy": -10}}
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "O Leão Covarde",
+		"type": "calibration",
+		"active_characters": ["dorothy", "lion"],
+		"objective": "Dorothy encontra o Leão durante uma ameaça.",
+		"book_event": "O Leão aparece entre medo e bravata diante do grupo.",
+		"decisions": [
+			{
+				"text": "Incentivar o Leão a enfrentar o perigo",
+				"effects": {"lion": {"courage": 15}}
+			},
+			{
+				"text": "Proteger o Leão da ameaça",
+				"effects": {"lion": {"courage": -5}, "tin_man": {"empathy": 5}}
+			},
+			{
+				"text": "Criticar o medo do Leão",
+				"effects": {"lion": {"courage": -10}}
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Travessia da Floresta",
+		"type": "calibration",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O grupo atravessa uma floresta com caminhos perigosos.",
+		"book_event": "A floresta força o grupo a escolher em quem confiar.",
+		"decisions": [
+			{
+				"text": "Seguir a estratégia do Espantalho",
+				"effects": {"scarecrow": {"intelligence": 10}}
+			},
+			{
+				"text": "Seguir o instinto do Leão",
+				"effects": {"lion": {"courage": 10}}
+			},
+			{
+				"text": "Ajudar o companheiro mais vulnerável",
+				"effects": {"tin_man": {"empathy": 10}}
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "As Kalidahs",
+		"type": "calibration",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Criaturas perigosas bloqueiam a passagem.",
+		"book_event": "As Kalidahs ameaçam o grupo em uma passagem estreita.",
+		"decisions": [
+			{
+				"text": "Enfrentar diretamente",
+				"effects": {"lion": {"courage": 15}}
+			},
+			{
+				"text": "Distrair as criaturas",
+				"effects": {"scarecrow": {"intelligence": 10}}
+			},
+			{
+				"text": "Proteger o grupo e recuar",
+				"effects": {"tin_man": {"empathy": 10}, "lion": {"courage": -5}}
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "O Campo Perigoso",
+		"type": "calibration",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Um companheiro fica para três em uma área hostil.",
+		"book_event": "O grupo precisa decidir entre pressa, cuidado e resgate.",
+		"decisions": [
+			{
+				"text": "Voltar para salvá-lo",
+				"effects": {"tin_man": {"empathy": 15}}
+			},
+			{
+				"text": "Criar um plano antes de agir",
+				"effects": {"scarecrow": {"intelligence": 15}}
+			},
+			{
+				"text": "Avançar enfrentando os inimigos",
+				"effects": {"lion": {"courage": 15}}
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Entrada na Cidade das Esmeraldas",
+		"type": "transition",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O grupo chega à Cidade das Esmeraldas.",
+		"book_event": "A chegada à cidade muda o ritmo da jornada.",
+		"decisions": [
+			{
+				"text": "Entrar com cautela",
+				"effects": {"scarecrow": {"intelligence": 5}}
+			},
+			{
+				"text": "Entrar confiando no grupo",
+				"effects": {"tin_man": {"empathy": 5}}
+			},
+			{
+				"text": "Entrar sem hesitar",
+				"effects": {"lion": {"courage": 5}}
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Pedido ao Mágico",
+		"type": "transition",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O Mágico exige que o grupo enfrente a Bruxa do Oeste.",
+		"book_event": "O pedido do Mágico transforma esperança em missão perigosa.",
+		"decisions": [
+			{
+				"text": "Aceitar a missão com coragem",
+				"effects": {"lion": {"courage": 5}}
+			},
+			{
+				"text": "Questionar o pedido",
+				"effects": {"scarecrow": {"intelligence": 5}}
+			},
+			{
+				"text": "Pensar no impacto sobre todos",
+				"effects": {"tin_man": {"empathy": 5}}
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Ataque dos Lobos",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Lobos enviados pela Bruxa atacam o grupo.",
+		"book_event": "Primeiro ataque direto da Bruxa do Oeste.",
+		"observation_focus": "Comportamento dos NPCs baseado nos atributos acumulados.",
+		"decisions": []
+	},
+	{
+		"id": 10,
+		"name": "Ataque dos Corvos",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Corvos atacam o grupo.",
+		"book_event": "A ameaça aárea força adaptação rápida.",
+		"observation_focus": "Inteligência do Espantalho.",
+		"decisions": []
+	},
+	{
+		"id": 11,
+		"name": "Ataque das Abelhas",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Abelhas atacam Dorothy e os companheiros.",
+		"book_event": "A Bruxa tenta enfraquecer o grupo com um ataque coordenado.",
+		"observation_focus": "Empatia do Homem de Lata.",
+		"decisions": []
+	},
+	{
+		"id": 12,
+		"name": "Ataque dos Winkies",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Guardas da Bruxa tentam capturar o grupo.",
+		"book_event": "Os Winkies pressionam o grupo por todos os lados.",
+		"observation_focus": "Reação coletiva dos NPCs.",
+		"decisions": []
+	},
+	{
+		"id": 13,
+		"name": "Macacos Alados",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Macacos alados desorganizam o grupo.",
+		"book_event": "A captura aárea separa Dorothy dos companheiros.",
+		"observation_focus": "Fuga, proteção e reorganização.",
+		"decisions": []
+	},
+	{
+		"id": 14,
+		"name": "Resgate dos Companheiros",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Os personagens precisam se reunir após serem separados.",
+		"book_event": "O grupo tenta reconstruir sua formação depois da separação.",
+		"observation_focus": "Cooperação entre NPCs.",
+		"decisions": []
+	},
+	{
+		"id": 15,
+		"name": "Castelo da Bruxa",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O grupo precisa atravessar o castelo evitando ameaças.",
+		"book_event": "O castelo concentra perigo, rotas alternativas e tensão.",
+		"observation_focus": "Planejamento e escolha de rotas.",
+		"decisions": []
+	},
+	{
+		"id": 16,
+		"name": "Derrota da Bruxa",
+		"type": "test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Dorothy enfrenta a Bruxa e os NPCs podem ajudá-la.",
+		"book_event": "O confronto com a Bruxa testa iniciativa e suporte.",
+		"observation_focus": "Proteção, suporte e iniciativa dos NPCs.",
+		"decisions": []
+	},
+	{
+		"id": 17,
+		"name": "Retorno à Cidade das Esmeraldas",
+		"type": "final_test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O grupo retorna após derrotar a Bruxa.",
+		"book_event": "A volta revela se o comportamento dos NPCs permanece coerente.",
+		"observation_focus": "Consistência do comportamento aprendido.",
+		"decisions": []
+	},
+	{
+		"id": 18,
+		"name": "Jornada para Glinda",
+		"type": "final_test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "O grupo atravessa uma rota final com obstáculos, inimigos e caminhos alternativos.",
+		"book_event": "A rota para Glinda exige autonomia e escolhas consistentes.",
+		"observation_focus": "Autonomia dos NPCs.",
+		"decisions": []
+	},
+	{
+		"id": 19,
+		"name": "Desafio Final de Cooperação",
+		"type": "final_test",
+		"active_characters": ["dorothy", "lion", "tin_man", "scarecrow"],
+		"objective": "Dorothy precisa atravessar uma área perigosa e os três companheiros devem cooperar.",
+		"book_event": "O último desafio concentra perigo, suporte e colaboração.",
+		"observation_focus": "Believability, coerência causal e consistência de personalidade.",
+		"decisions": []
+	}
+]

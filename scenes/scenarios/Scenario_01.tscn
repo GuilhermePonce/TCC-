@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/scenarios/ScenarioController.gd" id="1"]
+
+[sub_resource type="RectangleShape2D" id="DecisionShape"]
+size = Vector2(145, 125)
+
+[sub_resource type="RectangleShape2D" id="ExitShape"]
+size = Vector2(85, 130)
+
+[node name="Scenario_01" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Ground" type="ColorRect" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 940.0
+offset_bottom = 640.0
+color = Color(0.16, 0.39, 0.25, 1)
+
+[node name="Road" type="ColorRect" parent="."]
+offset_left = 0.0
+offset_top = 270.0
+offset_right = 920.0
+offset_bottom = 350.0
+color = Color(0.82, 0.72, 0.30, 1)
+
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="dorothy" type="Marker2D" parent="Spawns"]
+position = Vector2(120, 310)
+
+[node name="lion" type="Marker2D" parent="Spawns"]
+position = Vector2(70, 258)
+
+[node name="tin_man" type="Marker2D" parent="Spawns"]
+position = Vector2(72, 340)
+
+[node name="scarecrow" type="Marker2D" parent="Spawns"]
+position = Vector2(40, 390)
+
+[node name="enemy" type="Marker2D" parent="Spawns"]
+position = Vector2(545, 310)
+
+[node name="DecisionTrigger" type="Area2D" parent="."]
+position = Vector2(430, 310)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DecisionTrigger"]
+shape = SubResource("DecisionShape")
+
+[node name="Label" type="Label" parent="DecisionTrigger"]
+offset_left = -56.0
+offset_top = -66.0
+offset_right = 86.0
+offset_bottom = -40.0
+text = "Decisão"
+
+[node name="ExitArea" type="Area2D" parent="."]
+position = Vector2(860, 310)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExitArea"]
+shape = SubResource("ExitShape")
+disabled = true
+
+[node name="Label" type="Label" parent="ExitArea"]
+visible = false
+offset_left = -24.0
+offset_top = -74.0
+offset_right = 42.0
+offset_bottom = -48.0
+text = "Saída"
